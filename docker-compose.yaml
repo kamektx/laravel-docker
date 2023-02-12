@@ -1,0 +1,10 @@
+version: '3'
+name: ci
+services:
+  laravel:
+    container_name: laravel-ci
+    build: './images/laravel-apache'
+    ports:
+      - 80:80
+    volumes:
+      - "./laravel-api:/laravel-api:cached"
